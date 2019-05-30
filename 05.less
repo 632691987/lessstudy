@@ -1,0 +1,10 @@
+@var: 0;
+.class {
+@var: 1;
+    .brass {
+      @var: 2;// 这个部署css 属性，而是看作是重复赋值啊！！！相当于 var = 2;
+      three: @var;//3  
+      @var: 3;
+    }
+  one: @var;  //注意作用域，这里 @var 没有被执行 var = 2 和 var = 3
+}

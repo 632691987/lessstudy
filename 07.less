@@ -1,0 +1,27 @@
+//这个是说函数！！！还有默认值！！！ @开始就是变量, 函数名是.开始！
+
+.juzhong(@w:30px,@h:30px,@c:pink){
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: @c;
+    height: @h;
+    width: @w;
+}
+
+#wrap{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    margin: 0 auto;
+    .inner{
+       .juzhong(100px ,100px, blue);
+    }
+    .inner2{
+       .juzhong;//或者 .juzhong() 都可以
+    }
+}
